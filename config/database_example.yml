@@ -1,0 +1,10 @@
+default: &default
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+  username: something
+  password: something
+
+development:
+  <<: *default
+  database: elyxx_new_development

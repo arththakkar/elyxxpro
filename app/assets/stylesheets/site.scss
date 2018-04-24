@@ -1,0 +1,45 @@
+html { 
+  background: linear-gradient(rgba(61,86,121,1),rgba(0,0,0,0)), url(asset_path('pattern.jpg'));
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.menu{
+	position: relative;
+	width: 100%;
+	font-family: "verdana";
+	color: white;
+	font-size: 20px;
+}
+
+.top-menu{
+	position: absolute;
+	top: 0;
+	text-align: center;
+	margin-top: 5px;
+	width: 100%;
+}
+
+.right-menu{
+	position: absolute;
+	right: 0;
+	vertical-align: middle;
+	text-align: center;
+	margin-right: 5px;
+	height: 100%;
+}
+
+.bottom-menu{
+
+}
+
+.left-menu{
+
+}
