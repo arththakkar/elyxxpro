@@ -1,0 +1,44 @@
+@media (max-width:1024px){
+	.gallery_logo, .gallery_logo h3{
+		padding-left:0;
+		text-align:center;
+	}
+	
+	.gallery_logo:after{
+		display:none;
+	}
+	
+	.logo img, .gallery_logo img{
+		width:60%;
+		box-sizing:border-box;
+		text-align:center;
+	}
+}
+
+@media (max-width:767px){
+	.logo img, .gallery_logo img{
+		width:80%;
+		box-sizing:border-box;
+		text-align:center;
+	}
+	
+	.logo h3, .gallery_logo h3{
+		left:0;
+		padding:0;
+		width:100%;
+		bottom:-80px;
+		text-align:center;
+	}
+	
+	#about, #profile, #profile-to-home, #about-to-home{
+		writing-mode: tb-rl;
+	}
+}
+
+@media (max-width:540px){
+	.logo img, .gallery_logo img{
+		width:70%;
+		box-sizing:border-box;
+		text-align:center;
+	}
+}
