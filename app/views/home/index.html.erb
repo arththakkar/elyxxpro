@@ -33,10 +33,10 @@
 		<h3>THE FUTURE OF ART AND ARCHITECTURE</h3>
 	</div>
 
-	<div id="about" onclick="horizontal_button_click(this.id);">About</div>
-	<div id="profile" onclick="horizontal_button_click(this.id);">Profile</div>
-	<div id="login" onclick="vertical_button_click(this.id);">Login</div>
-	<div id="gallery-main" onclick="vertical_button_click(this.id);">Gallery</div>
+	<div id="about" onclick="horizontal_button_click(this.id);"><span id="about-text">About</span></div>
+	<div id="profile" onclick="horizontal_button_click(this.id);"><span id="profile-text">Profile</span></div>
+	<div id="login" onclick="vertical_button_click(this.id);"><span id="login-text">Login</span></div>
+	<div id="gallery-main" onclick="vertical_button_click(this.id);"><span id="gallery-text">Gallery</span></div>
 </section>
 
 <section class="section section-gallery" id="bottom">
@@ -52,7 +52,7 @@
 
 <section class="section section-about" id="left">
 	left
-	<div id="about-to-home" onclick="horizontal_button_click(this.id);">Home</div>
+	<div id="about-to-home" onclick="horizontal_button_click(this.id);"><span id="home-text">Home</span></div>
 </section>
 
 <section class="section section-profile" id="right">
@@ -61,6 +61,13 @@
 </section>
 
 <script type="text/javascript">
+
+	$(document).ready(function(){
+		$("#login-text").hide(0).delay(1000).fadeIn(2000)
+		$("#profile-text").hide(0).delay(2000).fadeIn(2000)
+		$("#gallery-text").hide(0).delay(3000).fadeIn(2000)
+		$("#about-text").hide(0).delay(4000).fadeIn(2000)
+	});
 
 	function vertical_button_click(element_id)
 	{        
@@ -94,26 +101,25 @@
 
 		if(element_id=="about")
 		{
-			$('.section-home').css({"right":"-100%"});
-			$('.section-about').css({"right":"0"});
+			$('.section-about').css({"z-index":"5", "right":"0"});
+			$('.section-home').css({"left":"100%"});
 		}       
 
 		else if(element_id=="profile")
 		{
-			$('.section-profile').css({"left":"0"});
+			$('.section-profile').css({"z-index":"5", "left":"0"});
 			$('.section-home').css({"left":"-100%"});
 		}
 
-
 		else if(element_id=="about-to-home")
 		{
-			$('.section-home').css({"right":"0"});
+			$('.section-home').css({"z-index":"5", "left":"0"});
 			$('.section-about').css({"right":"100%" });
 		}
 
 		else if(element_id=="profile-to-home")
 		{
-			$('.section-home').css({"left":"0"});
+			$('.section-home').css({"z-index": "5", "left":"0"});
 			$('.section-profile').css({"left":"100%" });
 		}
 
