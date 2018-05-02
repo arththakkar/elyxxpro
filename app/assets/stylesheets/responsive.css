@@ -1,22 +1,40 @@
 @media (max-width:1024px){
-	.gallery_logo, .gallery_logo h3{
+	.gallery_logo, .gallery_logo h3, .pattern_logo, .pattern_logo_bottom{
 		padding-left:0;
 		text-align:center;
 	}
 	
-	.gallery_logo:after{
+	.gallery_logo:after, .pattern_logo:after, .pattern_logo_bottom:after{
 		display:none;
 	}
 	
-	.logo img, .gallery_logo img{
+	.logo img, .gallery_logo img, .pattern_logo img, .pattern_logo_bottom img{
 		width:60%;
 		box-sizing:border-box;
 		text-align:center;
 	}
+	
+	.section-gallery-collection{
+		overflow-y:auto;
+	}
+ 	.pattern_logo{
+		position:relative;
+		width:100%;
+		left:0;
+		top:0;
+		transform:none;
+		margin-bottom:15px;
+	}
+	.collection1, .collection2, .collection3, .collection4{
+		position:relative;
+		width:100%;
+		left:0;
+		margin-bottom:10px;
+	}
 }
 
 @media (max-width:767px){
-	.logo img, .gallery_logo img{
+	.logo img, .gallery_logo img, .pattern_logo img, .pattern_logo_bottom img{
 		width:80%;
 		box-sizing:border-box;
 		text-align:center;
@@ -33,10 +51,13 @@
 	#about, #profile, #profile-to-home, #about-to-home{
 		writing-mode: tb-rl;
 	}
+	.selected_collection img{
+		width:100%;
+	}
 }
 
 @media (max-width:540px){
-	.logo img, .gallery_logo img{
+	.logo img, .gallery_logo img, .pattern_logo img, .pattern_logo_bottom img{
 		width:70%;
 		box-sizing:border-box;
 		text-align:center;

@@ -46,8 +46,8 @@
 		<h3>View our specially made collections of art from every facet of your imagination.</h3>
 	</div>
 
-	<div id="gallery-to-home" onclick="vertical_button_click(this.id);">Home</div>
-	<div id="view-gallery" onclick="vertical_button_click(this.id);">View</div>
+	<div id="gallery-to-home" onclick="vertical_button_click(this.id);"><span id="gallery-home-text">Home</span></div>
+	<div id="view-gallery" onclick="vertical_button_click(this.id);"><span id="gallery-view-text">View</span></div>
 </section>
 
 <section class="section section-about" id="left">
@@ -60,6 +60,28 @@
 	<div id="profile-to-home" onclick="horizontal_button_click(this.id);">Home</div>
 </section>
 
+<section class="section section-gallery-wall" id="gallery-wall">
+	<div class="container-fluid">
+		<div class="col-sm-12">
+			<div id="Center">
+				<ul id="waterfall" class="list-unstyled">
+					<% 1.upto(5) do |i| %>
+					<li>
+						<div>
+							<a href="javascript:void(0)" id="view_collection" onclick="horizontal_button_click(this.id);">
+								<span class="view"><h1>+</h1>View Collection</span>
+							</a>
+							<%= image_tag "image#{i}.jpg" %>
+						</div>
+					</li>
+					<% end %>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="gallery-wall-to-gallery" onclick="vertical_button_click(this.id);">Gallery</div>
+</section>
+
 <script type="text/javascript">
 
 	$(document).ready(function(){
@@ -67,12 +89,18 @@
 		$("#profile-text").hide(0).delay(2000).fadeIn(2000)
 		$("#gallery-text").hide(0).delay(3000).fadeIn(2000)
 		$("#about-text").hide(0).delay(4000).fadeIn(2000)
+		$('#waterfall').NewWaterfall({
+			width: 360,
+			delay: 100,
+		});
 	});
 
 	function vertical_button_click(element_id)
 	{        
 		if(element_id=="gallery-main")
 		{
+			$("#gallery-home-text").hide(0).delay(1000).fadeIn(2000)
+			$("#gallery-view-text").hide(0).delay(2000).fadeIn(2000)
 			$('.section-gallery').css({"z-index":"5" , "top":"0", });
 			$('.section-home').css({"top":"-100%"});
 		}
@@ -94,6 +122,18 @@
 			$('.section-home').css({"z-index":"5" , "top":"0"});
 			$('.section-gallery').css({"top":"100%"});
 		}
+
+		else if (element_id=="view-gallery") 
+		{
+			$('.section-gallery-wall').css({"z-index":"5" , "top":"0"});
+			$('.section-gallery').css({"top":"-100%"});
+		}
+
+		else if(element_id=="gallery-wall-to-gallery")
+    {
+			$('.section-gallery-wall').css({"top":"100%"});
+			$('.section-gallery').css({"top":"0"});
+    }
 	}
 
 	function horizontal_button_click(element_id)

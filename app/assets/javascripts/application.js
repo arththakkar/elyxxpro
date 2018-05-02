@@ -16,4 +16,5 @@
 //= require turbolinks
 //= require bootstrap.min
 //= require masonry.pkgd.min
+//= require newWaterfall.js
 //= require_tree .
