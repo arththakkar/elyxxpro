@@ -95,74 +95,139 @@
 		});
 	});
 
-	function vertical_button_click(element_id)
-	{        
-		if(element_id=="gallery-main")
-		{
-			$("#gallery-home-text").hide(0).delay(1000).fadeIn(2000)
-			$("#gallery-view-text").hide(0).delay(2000).fadeIn(2000)
-			$('.section-gallery').css({"z-index":"5" , "top":"0", });
-			$('.section-home').css({"top":"-100%"});
-		}
-
-		else if(element_id=="login")
-		{
-			$('.section-login').css({"z-index":"5" , "bottom":"0" });
-			$('.section-home').css({"top":"100%"});
-		}
-
-		else if(element_id=="login-to-home")
-		{
-			$('.section-home').css({"z-index":"5" , "top":"0"});
-			$('.section-login').css({"bottom":"100%"});
-		}
-
-		else if(element_id=="gallery-to-home")
-		{
-			$('.section-home').css({"z-index":"5" , "top":"0"});
-			$('.section-gallery').css({"top":"100%"});
-		}
-
-		else if (element_id=="view-gallery") 
-		{
-			$('.section-gallery-wall').css({"z-index":"5" , "top":"0"});
-			$('.section-gallery').css({"top":"-100%"});
-		}
-
-		else if(element_id=="gallery-wall-to-gallery")
-    {
-			$('.section-gallery-wall').css({"top":"100%"});
-			$('.section-gallery').css({"top":"0"});
-    }
-	}
-
 	function horizontal_button_click(element_id)
-	{
+      {
+				
+				if(element_id=="about")
+        {
+					//alert(element_id);
+					$(".section-about").removeAttr("style");
+					$(".section-home").removeAttr("style");
+					
+					$('.section-about').animate({"z-index": "5", "right": "0"}, "fast");
+					$('.section-home').animate({"right": "-100%"}, "fast");
+					//$('.section-home').css({ "right":"-100%"});
+          //$('.section-about').css({"z-index":"5" , "right":"0"});
+        }       
+        
+        else if(element_id=="profile")
+        {
+					
+					$(".section-profile").removeAttr("style");
+					$(".section-home").removeAttr("style");
+					
+					$('.section-profile').animate({"z-index": "5", "left": "0"}, "fast");
+					$('.section-home').animate({"right": "100%"}, "fast");
+          //$('.section-home').css({"right":"100%"});
+					//$('.section-profile').css({"z-index":"5" , "left":"0"});
+        }
+				
+        else if(element_id=="about-to-home")
+        {
+					
+					$(".section-about").removeAttr("style");
+					//$(".section-home").removeAttr("style");
+					
+					
+					$('.section-about').animate({"right": "100%"}, "fast");
+					$('.section-home').animate({"right": "0"}, "fast");
+					
+					//$('.section-home').css({"right":"0"});
+					//$('.section-about').css({"right":"100%" });
+        }
 
-		if(element_id=="about")
-		{
-			$('.section-about').css({"z-index":"5", "right":"0"});
-			$('.section-home').css({"left":"100%"});
-		}       
+        else if(element_id=="profile-to-home")
+        {
+					$(".section-profile").removeAttr("style");
+					//$(".section-home").removeAttr("style");
+					
+					$('.section-home').animate({"right": "0"}, "fast");
+					$('.section-profile').animate({"left": "100%"}, "fast");
+					
+					
+					//$('.section-home').css({"left":"0"});
+          //$('.section-profile').css({"left":"100%" });
+        }
+				
+				else if(element_id=="view_collection")
+        {
+					// $(".section-gallery-wall").removeAttr("style");
+					
+					// $('.section-gallery-collection').animate({"left": "0"}, "fast");
+					// $('.section-gallery-wall').animate({"left": "-100%", "top": "0"}, "fast");
+        }
+				
+				else if(element_id=="collection-to-gallery")
+        {
+					$(".section-gallery-wall").removeAttr("style");
+					$(".section-gallery-collection").removeAttr("style");
+					
+					$('.section-gallery-collection').animate({"left": "100%"}, "fast");
+					$('.section-gallery-wall').animate({"left": "0", "top": "0"}, "fast");
+        }
+				
+				else if(element_id=="view-image")
+        {
+					$(".section-gallery-collection").removeAttr("style");
+					
+					$('.section-gallery-collection').animate({"left": "-100%"}, "fast");
+					$('.section-selected-gallery-collection').animate({"left": "0"}, "fast");
+        }
+				
+				else if(element_id=="back-to-collection")
+        {
+					$(".section-gallery-collection").removeAttr("style");
+					$(".section-gallery-collection").removeAttr("style");
+					
+					$('.section-gallery-collection').animate({"left": "0"}, "fast");
+					$('.section-selected-gallery-collection').animate({"left": "100%"}, "fast");
+        }
+				
+				
+				
 
-		else if(element_id=="profile")
-		{
-			$('.section-profile').css({"z-index":"5", "left":"0"});
-			$('.section-home').css({"left":"-100%"});
-		}
+      }
+			
+      function vertical_button_click(element_id)
+      {        
+        if(element_id=="gallery-main")
+        {
+        	$("#gallery-home-text").hide(0).delay(1000).fadeIn(2000)
+			 		$("#gallery-view-text").hide(0).delay(2000).fadeIn(2000)
+          $('.section-gallery').css({"z-index":"5" , "top":"0", });
+					$('.section-home').css({"top":"-100%"});
+        }
+        
+        else if(element_id=="login")
+        {
+          $('.section-login').css({"z-index":"5" , "bottom":"0" });
+					$('.section-home').css({"top":"100%"});
+        }
+        
+        else if(element_id=="login-to-home")
+        {
+					$('.section-home').css({"z-index":"5" , "top":"0"});
+          $('.section-login').css({"bottom":"100%"});
+        }
 
-		else if(element_id=="about-to-home")
-		{
-			$('.section-home').css({"z-index":"5", "left":"0"});
-			$('.section-about').css({"right":"100%" });
-		}
-
-		else if(element_id=="profile-to-home")
-		{
-			$('.section-home').css({"z-index": "5", "left":"0"});
-			$('.section-profile').css({"left":"100%" });
-		}
-
-	}
+        else if(element_id=="gallery-to-home")
+        {
+					$('.section-home').css({"z-index":"5" , "top":"0"});
+          $('.section-gallery').css({"top":"100%"});
+        }
+				
+				else if(element_id=="view-gallery")
+        {
+          $('.section-gallery-wall').css({"top":"0"});
+					$('.section-gallery').css({"top":"-100%"});
+        }
+				
+				else if(element_id=="gallery-wall-to-gallery")
+        {
+					$('.section-gallery-wall').css({"top":"100%"});
+					$('.section-gallery').css({"top":"0"});
+        }
+				
+      }
 
 </script>
