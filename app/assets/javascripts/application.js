@@ -17,4 +17,32 @@
 //= require bootstrap.min
 //= require masonry.pkgd.min
 //= require newWaterfall.js
-//= require_tree .
+//= require anime.min.js
+//= require particles.js
+//= require demo.js
+// require_tree .
+
+$(document).ready(function(){
+	$("#login-text").hide(0).delay(1000).fadeIn(2000)
+	$("#profile-text").hide(0).delay(2000).fadeIn(2000)
+	$("#gallery-text").hide(0).delay(3000).fadeIn(2000)
+	$("#about-text").hide(0).delay(4000).fadeIn(2000)
+	$('#waterfall').NewWaterfall({
+		width: 360,
+		delay: 100,
+	});
+	$(".move-top").click(function(){
+		$(this).animate({
+			left: '20px',
+			top: '30px',
+			height: '50px', 
+		}, {
+			step: function(now) {
+				$(this).css({'font-size': '50px'});
+			}
+		});
+	});
+	setTimeout(function() {
+		$('.move-top').trigger('click');
+	}, 15800);
+});

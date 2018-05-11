@@ -28,9 +28,14 @@
 
 <section class="section section-home" id="center">
 
-	<div class="logo">
-		<%= image_tag "elyxx.png" %>
+	<!-- <div class="logo">
+		<%#= image_tag "elyxx.png" %>
 		<h3>THE FUTURE OF ART AND ARCHITECTURE</h3>
+	</div> -->
+
+	<div class="animate">
+		<div class="move-top"><%= image_tag "logo_01.png" %></div>
+		<div class="part-two"><%= image_tag "logo_02.png" %></div>
 	</div>
 
 	<div id="about" onclick="horizontal_button_click(this.id);"><span id="about-text">About</span></div>
@@ -39,7 +44,7 @@
 	<div id="gallery-main" onclick="vertical_button_click(this.id);"><span id="gallery-text">Gallery</span></div>
 </section>
 
-<section class="section section-gallery" id="bottom">
+<section class="section section-gallery" id="gallery">
 
 	<div class="gallery_logo">
 		<%= image_tag "gallery.png" %>
@@ -82,18 +87,60 @@
 	<div id="gallery-wall-to-gallery" onclick="vertical_button_click(this.id);">Gallery</div>
 </section>
 
-<script type="text/javascript">
+<section class="section section-gallery-collection relative-pos" id="gallery-collection">
+	<div class="container-fluid">
 
-	$(document).ready(function(){
-		$("#login-text").hide(0).delay(1000).fadeIn(2000)
-		$("#profile-text").hide(0).delay(2000).fadeIn(2000)
-		$("#gallery-text").hide(0).delay(3000).fadeIn(2000)
-		$("#about-text").hide(0).delay(4000).fadeIn(2000)
-		$('#waterfall').NewWaterfall({
-			width: 360,
-			delay: 100,
-		});
-	});
+		<div class="pattern_logo" id="collection-to-gallery" onclick="horizontal_button_click(this.id);">
+			<h1>PATTERN</h1>
+		</div>
+
+		<div class="collection collection1">
+			<a href="javascript:void(0)" id="view-image" onclick="horizontal_button_click(this.id);">
+				<%= image_tag "collection-img1.jpg" %>
+			</a>
+		</div>
+
+		<div class="collection collection2">
+			<a href="javascript:void(0)" id="view-image" onclick="horizontal_button_click(this.id);">
+				<%= image_tag "collection-img2.jpg" %>
+			</a>
+		</div>
+
+		<div class="collection collection3">
+			<a href="javascript:void(0)" id="view-image" onclick="horizontal_button_click(this.id);">
+				<%= image_tag "collection-img3.jpg" %>
+			</a>
+		</div>
+
+		<div class="collection collection4">
+			<a href="javascript:void(0)" id="view-image" onclick="horizontal_button_click(this.id);">
+				<%= image_tag "collection-img4.jpg" %>
+			</a>
+		</div>
+
+	</div>
+</section>
+
+<section class="section section-selected-gallery-collection" id="selected-image">
+
+	<div class="pattern_logo_bottom">
+		<h1>PATTERN</h1>
+	</div>
+
+	<div class="cast_btn">
+  	<button>Cast</button>
+	</div>
+
+	<div class="selected_collection">
+		<%= image_tag "collection-img3.jpg" %>
+	</div>
+
+	<div id="back-to-collection" onclick="horizontal_button_click(this.id);"></div>
+	<div id="next-image" onclick="horizontal_button_click(this.id);"></div>
+
+</section>
+
+<script type="text/javascript">
 
 	function horizontal_button_click(element_id)
       {
@@ -151,10 +198,10 @@
 				
 				else if(element_id=="view_collection")
         {
-					// $(".section-gallery-wall").removeAttr("style");
+					$(".section-gallery-wall").removeAttr("style");
 					
-					// $('.section-gallery-collection').animate({"left": "0"}, "fast");
-					// $('.section-gallery-wall').animate({"left": "-100%", "top": "0"}, "fast");
+					$('.section-gallery-collection').animate({"left": "0"}, "fast");
+					$('.section-gallery-wall').animate({"left": "-100%", "top": "0"}, "fast");
         }
 				
 				else if(element_id=="collection-to-gallery")
