@@ -14,5 +14,7 @@
  *= require bootstrap.min
  *= require style
  *= require responsive
+ *= require demo
+ *= require style1
  *= require_self
  */

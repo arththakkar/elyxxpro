@@ -20,6 +20,8 @@
 //= require anime.min.js
 //= require particles.js
 //= require demo.js
+//= require jquery.masonry.min
+//= require gamma.js
 // require_tree .
 
 $(document).ready(function(){
@@ -46,3 +48,4 @@ $(document).ready(function(){
 		$('.move-top').trigger('click');
 	}, 15800);
 });
+

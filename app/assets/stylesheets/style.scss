@@ -278,13 +278,13 @@ body{
   text-align:left;
   margin-bottom:0;
   text-transform:uppercase;
-  font-weight:normal
+  font-weight:normal;
 }
 
 .form_field input[type='text'], .form_field input[type='password']{
   width:100%;
   font-size:18px;
-  font-weight:normal;
+  font-weight:600;
   padding:0 10px 0 10px;
   margin-bottom:25px;
   background:transparent;
@@ -292,6 +292,7 @@ body{
   border:0;
   box-shadow:none;
   color:#ffffff;
+  font-weight:normal;
 }
 
 .form_field button{
@@ -306,8 +307,9 @@ body{
   border-radius:5px;
   font-size:18px;
   text-transform:uppercase;
-  font-weight:normal;
+  font-weight:600;
   cursor:pointer;
+  font-weight:normal;
 }
 
 .signup h2{
@@ -413,120 +415,6 @@ body{
   padding:50px 0 50px 0;
   box-sizing:border-box;
 }
-
-/*Gallery Grid*/
-#waterfall {
-    margin: 10px;
-    overflow: hidden;
-    margin-bottom:50px;
-}
-
-#waterfall.min {
-    margin: 0;
-}
-
-#waterfall li {
-    /*position: absolute;*/
-    left: 0;
-    top: 0;
-    opacity: 0;
-    z-index: 0;
-    transform: translateY(100px);
-}
-
-#waterfall li:hover {
-    z-index: 1;
-}
-
-#waterfall li.show {
-    opacity: 1;
-    transform: translateY(0);
-    transition: all 0.3s, top 1s;
-}
-
-#waterfall li>div{
-    color: rgba(0, 0, 0, 0.6);
-    font-size: 32px;
-    border-radius: 3px;
-    margin: 10px;
-    transition: all 0.5s;
-    position:relative;
-    cursor:pointer;
-}
-
-#waterfall li>div a{
-  text-decoration:none;
-  border:0;
-  outline:0;
-  box-shadow:none;
-  color:white;
-  font-size:14px;
-  text-transform:uppercase;
-  background:rgba(61,86,121,0);
-  transition:0.3s;
-  overflow:hidden;
-  position:absolute;
-  width:100%;
-  height:100%;
-}
-
-.view{
-  position:relative;
-  width:100%;
-  display:inline-block;
-  text-align:center;
-  top:-150%;
-  transform:translateY(-50%);
-  -webkit-transform:translateY(-50%);
-  -moz-transform:translateY(-50%);
-  -ms-transform:translateY(-50%);
-  -o-transform:translateY(-50%);
-  transition:0.8s;
-}
-
-.view h1{
-  font-size:40px;
-  margin:-100% 0 0 0;
-}
-
-#waterfall li>div a:hover{
-  background:rgba(61,86,121,0.6);
-}
-
-#waterfall li>div a:hover > .view{
-  top:50%;  
-}
-
-#waterfall li>div img {
-  width:100%;
-  height:auto;
-}
-
-#waterfall li>div:hover {
-    transform: translateY(-4px);
-    transition: all 0.3s;
-    -webkit-box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.3);
-    -moz-box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.3);
-    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.3);
-}
-
-#waterfall li.min>div {
-    margin: 0;
-    transform: none;
-    border: none;
-    border-radius: 0;
-    box-shadow: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-#waterfall li.min>div:hover {
-    transform: none;
-    border: none;
-    border-radius: 0;
-    box-shadow: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
-/*Gallery Grid Closed*/
 /*Gallery Page Closed*/
 
 /*Gallery Collection*/
@@ -677,8 +565,6 @@ body{
   font-size:40px;
   text-shadow:none;
 }
-
-
 
 .selected_collection{
   width:100%;
@@ -836,6 +722,7 @@ body{
   text-align: center;
 }
 
+/*EDITED ON: 2-10-18*/
 .move-top{
   width: auto;
   display: inline-block;
@@ -847,7 +734,9 @@ body{
   height:120px;
   display:inline-block;
   pointer-events: none;
+  overflow: visible !important;
 }
+/*EDITED ON: 2-10-18 CLOSED*/
 
 .part-two{
   height:120px;
@@ -866,14 +755,13 @@ body{
   margin-left: 130px;
   transform: translateY(-50%);
   color: #ffffff;
-
 }
 
 .particles-canvas {
   position: absolute;
   pointer-events: none;
   top: 50%;
-  left: 50%;
+    left: 50%;
   transform: translate3d(-50%,-50%,0);
 }
 
@@ -884,33 +772,140 @@ body{
 
 /*CAST BUTTON*/
 .cast_btn{
-    position:absolute;
-    width:auto;
-    display:inline-block;
-    top:20px;
-    left:20px;
+  position:absolute;
+  width:auto;
+  display:inline-block;
+  top:20px;
+  left:20px;
 }
 
 .cast_btn button{
-    width:auto;
-    display:inline-block;
-    background-color:#3d5679;
-    outline:0;
-    border:1px solid #fff;
-    box-shadow:none;
-    color:#ffffff;
-    padding:8px 20px 8px 20px;
-    border-radius:5px;
-    font-size:18px;
-    text-transform:uppercase;
-    cursor:pointer;
-    font-weight:normal;
-    transition:0.3s;
-    z-index:3;
+  width:auto;
+  display:inline-block;
+  background-color:#3d5679;
+  outline:0;
+  border:1px solid #fff;
+  box-shadow:none;
+  color:#ffffff;
+  padding:8px 20px 8px 20px;
+  border-radius:5px;
+  font-size:18px;
+  text-transform:uppercase;
+  cursor:pointer;
+  font-weight:normal;
+  transition:0.3s;
+  z-index:3;
 }
 .cast_btn button:hover{
-    background:#fff;
-    color:#3d5679;
-    box-shadow:0px 0px 10px 0px rgba(0,0,0,0.5);
+  background:#fff;
+  color:#3d5679;
+  box-shadow:0px 0px 10px 0px rgba(0,0,0,0.5);
 }
 /*CAST BUTTON*/
+
+
+/* ADDED ON 2-10-18 */
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  /* background-color: #111; */
+  background: url(asset_path("background-profile.png")) no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+  transition: 0.5s;
+  box-shadow: 0px 0px 20px 4px rgba(0,0,0,0.4);
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 30px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  font-size: 36px;
+  text-align:right;
+  padding-right:20px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav a {font-size: 18px;}
+}
+
+#menu-toggle span {
+  display: block;
+  background: #566973;
+  border-radius: 2px;
+  transition: .25s ease-in-out;
+  box-sizing: border-box;
+}
+
+#menu-toggle {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 5px;
+  top: 14px;
+  left: 30px;
+  transition: .25s ease-in-out;
+  box-sizing: border-box;
+}
+#menu-toggle:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+#menu-toggle #hamburger {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+#menu-toggle #hamburger span {
+  width: 30px;
+  height: 4px;
+  position: relative;
+  top: 6px;
+  left: 10px;
+  margin: 7px 0;
+
+  -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+  -webkit-animation-iteration-count: infinite;
+  animation-name: example;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-delay: 0, 2s;
+}
+
+#menu-toggle #hamburger span:nth-child(1) {
+  animation-delay: .5s;
+}
+#menu-toggle #hamburger span:nth-child(2) {
+  animation-delay: .625s;
+}
+#menu-toggle #hamburger span:nth-child(3) {
+  animation-delay: .75s;
+}
+
+@-webkit-keyframes example {
+  0%   {width:30px}
+  50% {width:0}
+}
+
+@keyframes example {
+  0%   {width:30px}
+  50% {width:0}
+}
+
+/* ADDED ON 2-10-18 */

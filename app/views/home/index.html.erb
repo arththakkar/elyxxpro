@@ -66,21 +66,362 @@
 </section>
 
 <section class="section section-gallery-wall" id="gallery-wall">
+
+	<!-- ADDED ON 2-10-18 -->
+	<!-- RIGHT DRAWER -->
+			
+			<div id="mySidenav" class="sidenav">
+					<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+					<a href="#">Image 1</a>
+					<a href="#">Image 2</a>
+					<a href="#">Image 3</a>
+					<a href="#">Image 4</a>
+					<a href="#">Image 5</a>
+					<a href="#">Image 6</a>
+					<a href="#">Image 7</a>
+					<a href="#">Image 8</a>
+					<a href="#">Image 9</a>
+					<a href="#">Image 10</a>
+					<a href="#">Image 11</a>
+					<a href="#">Image 12</a>					
+				</div>
+				
+				<div id="menu-toggle" onclick="openNav()">
+					<div id="hamburger">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+				
+	<!-- RIGHT DRAWER -->
+	<!-- ADDED ON 2-10-18 CLOSED-->
+
 	<div class="container-fluid">
 		<div class="col-sm-12">
-			<div id="Center">
-				<ul id="waterfall" class="list-unstyled">
-					<% 1.upto(5) do |i| %>
-					<li>
-						<div>
-							<a href="javascript:void(0)" id="view_collection" onclick="horizontal_button_click(this.id);">
-								<span class="view"><h1>+</h1>View Collection</span>
-							</a>
-							<%= image_tag "image#{i}.jpg" %>
-						</div>
-					</li>
-					<% end %>
-				</ul>
+			<div class="gamma-container gamma-loading" id="gamma-container">
+					<ul class="gamma-gallery">
+	
+						<li>
+							<div data-alt="img01" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350">
+								<div data-src="<%= asset_path('image1.jpg') %>" data-min-width="1300"></div>
+								<div data-src="<%= asset_path('image1.jpg') %>" data-min-width="1000"></div>
+								<div data-src="<%= asset_path('image1.jpg') %>" data-min-width="700"></div>
+								<div data-src="<%= asset_path('image1.jpg') %>" data-min-width="300"></div>
+								<div data-src="<%= asset_path('image1.jpg') %>" data-min-width="200"></div>
+								<div data-src="<%= asset_path('image1.jpg') %>" data-min-width="140"></div>
+								<div data-src="<%= asset_path('image1.jpg') %>"></div>
+								<noscript>
+									<%= image_tag "image1.jpg", alt: "img01" %>
+								</noscript>
+							</div>
+						</li>
+
+						<li>
+							<div data-alt="img01" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350">
+								<div data-src="<%= asset_path('image1.jpg') %>" data-min-width="1300"></div>
+								<div data-src="<%= asset_path('image1.jpg') %>" data-min-width="1000"></div>
+								<div data-src="<%= asset_path('image1.jpg') %>" data-min-width="700"></div>
+								<div data-src="<%= asset_path('image1.jpg') %>" data-min-width="300"></div>
+								<div data-src="<%= asset_path('image1.jpg') %>" data-min-width="200"></div>
+								<div data-src="<%= asset_path('image1.jpg') %>" data-min-width="140"></div>
+								<div data-src="<%= asset_path('image1.jpg') %>"></div>
+								<noscript>
+									<%= image_tag "image1.jpg", alt: "img01" %>
+								</noscript>
+							</div>
+						</li>
+
+						<li>
+							<div data-alt="img02" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350">
+								<div data-src="<%= asset_path('image2.jpg') %>" data-min-width="1300"></div>
+								<div data-src="<%= asset_path('image2.jpg') %>" data-min-width="1000"></div>
+								<div data-src="<%= asset_path('image2.jpg') %>" data-min-width="700"></div>
+								<div data-src="<%= asset_path('image2.jpg') %>" data-min-width="300"></div>
+								<div data-src="<%= asset_path('image2.jpg') %>" data-min-width="200"></div>
+								<div data-src="<%= asset_path('image2.jpg') %>" data-min-width="140"></div>
+								<div data-src="<%= asset_path('image2.jpg') %>"></div>
+								<noscript>
+									<%= image_tag "image2.jpg", alt: "img02" %>
+								</noscript>
+							</div>
+						</li>
+					
+						<li>
+							<div data-alt="img03" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350">
+								<div data-src="<%= asset_path('image3.jpg') %>" data-min-width="1300"></div>
+								<div data-src="<%= asset_path('image3.jpg') %>" data-min-width="1000"></div>
+								<div data-src="<%= asset_path('image3.jpg') %>" data-min-width="700"></div>
+								<div data-src="<%= asset_path('image3.jpg') %>" data-min-width="300"></div>
+								<div data-src="<%= asset_path('image3.jpg') %>" data-min-width="200"></div>
+								<div data-src="<%= asset_path('image3.jpg') %>" data-min-width="140"></div>
+								<div data-src="<%= asset_path('image3.jpg') %>"></div>
+								<noscript>
+									<!-- <%= image_tag "image3.jpg", alt: "img03" %> -->
+									<%= image_tag "image3.jpg", alt: "img03" %>
+								</noscript>
+							</div>
+						</li>
+						
+						<li>
+							<div data-alt="img04" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350">
+								<div data-src="<%= asset_path('image4.jpg') %>" data-min-width="1300"></div>
+								<div data-src="<%= asset_path('image4.jpg') %>" data-min-width="1000"></div>
+								<div data-src="<%= asset_path('image4.jpg') %>" data-min-width="700"></div>
+								<div data-src="<%= asset_path('image4.jpg') %>" data-min-width="300"></div>
+								<div data-src="<%= asset_path('image4.jpg') %>" data-min-width="200"></div>
+								<div data-src="<%= asset_path('image4.jpg') %>" data-min-width="140"></div>
+								<div data-src="<%= asset_path('image4.jpg') %>"></div>
+								<noscript>
+									<%= image_tag "image4.jpg", alt: "img04" %>
+								</noscript>
+							</div>
+						</li>
+
+						<li>
+							<div data-alt="img05" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350">
+								<div data-src="<%= asset_path('image5.jpg') %>" data-min-width="1300"></div>
+								<div data-src="<%= asset_path('image5.jpg') %>" data-min-width="1000"></div>
+								<div data-src="<%= asset_path('image5.jpg') %>" data-min-width="700"></div>
+								<div data-src="<%= asset_path('image5.jpg') %>" data-min-width="300"></div>
+								<div data-src="<%= asset_path('image5.jpg') %>" data-min-width="200"></div>
+								<div data-src="<%= asset_path('image5.jpg') %>" data-min-width="140"></div>
+								<div data-src="<%= asset_path('image5.jpg') %>"></div>
+								<noscript>
+									<%= image_tag "image5.jpg", alt: "img05" %>
+								</noscript>
+							</div>
+						</li>
+						
+						<li>
+							<div data-alt="img01" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350">
+								<div data-src="<%= asset_path('image1.jpg') %>" data-min-width="1300"></div>
+								<div data-src="<%= asset_path('image1.jpg') %>" data-min-width="1000"></div>
+								<div data-src="<%= asset_path('image1.jpg') %>" data-min-width="700"></div>
+								<div data-src="<%= asset_path('image1.jpg') %>" data-min-width="300"></div>
+								<div data-src="<%= asset_path('image1.jpg') %>" data-min-width="200"></div>
+								<div data-src="<%= asset_path('image1.jpg') %>" data-min-width="140"></div>
+								<div data-src="<%= asset_path('image1.jpg') %>"></div>
+								<noscript>
+									<%= image_tag "image1.jpg", alt: "img01" %>
+								</noscript>
+							</div>
+						</li>
+
+						<li>
+							<div data-alt="img02" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350">
+								<div data-src="<%= asset_path('image2.jpg') %>" data-min-width="1300"></div>
+								<div data-src="<%= asset_path('image2.jpg') %>" data-min-width="1000"></div>
+								<div data-src="<%= asset_path('image2.jpg') %>" data-min-width="700"></div>
+								<div data-src="<%= asset_path('image2.jpg') %>" data-min-width="300"></div>
+								<div data-src="<%= asset_path('image2.jpg') %>" data-min-width="200"></div>
+								<div data-src="<%= asset_path('image2.jpg') %>" data-min-width="140"></div>
+								<div data-src="<%= asset_path('image2.jpg') %>"></div>
+								<noscript>
+									<%= image_tag "image2.jpg", alt: "img02" %>
+								</noscript>
+							</div>
+						</li>
+					
+						<li>
+							<div data-alt="img03" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350">
+								<div data-src="<%= asset_path('image3.jpg') %>" data-min-width="1300"></div>
+								<div data-src="<%= asset_path('image3.jpg') %>" data-min-width="1000"></div>
+								<div data-src="<%= asset_path('image3.jpg') %>" data-min-width="700"></div>
+								<div data-src="<%= asset_path('image3.jpg') %>" data-min-width="300"></div>
+								<div data-src="<%= asset_path('image3.jpg') %>" data-min-width="200"></div>
+								<div data-src="<%= asset_path('image3.jpg') %>" data-min-width="140"></div>
+								<div data-src="<%= asset_path('image3.jpg') %>"></div>
+								<noscript>
+									<%= image_tag "image3.jpg", alt: "img03" %>
+								</noscript>
+							</div>
+						</li>
+						
+						<li>
+							<div data-alt="img04" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350">
+								<div data-src="<%= asset_path('image4.jpg') %>" data-min-width="1300"></div>
+								<div data-src="<%= asset_path('image4.jpg') %>" data-min-width="1000"></div>
+								<div data-src="<%= asset_path('image4.jpg') %>" data-min-width="700"></div>
+								<div data-src="<%= asset_path('image4.jpg') %>" data-min-width="300"></div>
+								<div data-src="<%= asset_path('image4.jpg') %>" data-min-width="200"></div>
+								<div data-src="<%= asset_path('image4.jpg') %>" data-min-width="140"></div>
+								<div data-src="<%= asset_path('image4.jpg') %>"></div>
+								<noscript>
+									<%= image_tag "image4.jpg", alt: "img04" %>
+								</noscript>
+							</div>
+						</li>
+
+						<li>
+							<div data-alt="img05" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350">
+								<div data-src="<%= asset_path('image5.jpg') %>" data-min-width="1300"></div>
+								<div data-src="<%= asset_path('image5.jpg') %>" data-min-width="1000"></div>
+								<div data-src="<%= asset_path('image5.jpg') %>" data-min-width="700"></div>
+								<div data-src="<%= asset_path('image5.jpg') %>" data-min-width="300"></div>
+								<div data-src="<%= asset_path('image5.jpg') %>" data-min-width="200"></div>
+								<div data-src="<%= asset_path('image5.jpg') %>" data-min-width="140"></div>
+								<div data-src="<%= asset_path('image5.jpg') %>"></div>
+								<noscript>
+									<%= image_tag "image5.jpg", alt: "img05" %>
+								</noscript>
+							</div>
+						</li>
+
+						<li>
+							<div data-alt="img01" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350">
+								<div data-src="<%= asset_path('image1.jpg') %>" data-min-width="1300"></div>
+								<div data-src="<%= asset_path('image1.jpg') %>" data-min-width="1000"></div>
+								<div data-src="<%= asset_path('image1.jpg') %>" data-min-width="700"></div>
+								<div data-src="<%= asset_path('image1.jpg') %>" data-min-width="300"></div>
+								<div data-src="<%= asset_path('image1.jpg') %>" data-min-width="200"></div>
+								<div data-src="<%= asset_path('image1.jpg') %>" data-min-width="140"></div>
+								<div data-src="<%= asset_path('image1.jpg') %>"></div>
+								<noscript>
+									<%= image_tag "image1.jpg", alt: "img01" %>
+								</noscript>
+							</div>
+						</li>
+
+						<li>
+							<div data-alt="img02" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350">
+								<div data-src="<%= asset_path('image2.jpg') %>" data-min-width="1300"></div>
+								<div data-src="<%= asset_path('image2.jpg') %>" data-min-width="1000"></div>
+								<div data-src="<%= asset_path('image2.jpg') %>" data-min-width="700"></div>
+								<div data-src="<%= asset_path('image2.jpg') %>" data-min-width="300"></div>
+								<div data-src="<%= asset_path('image2.jpg') %>" data-min-width="200"></div>
+								<div data-src="<%= asset_path('image2.jpg') %>" data-min-width="140"></div>
+								<div data-src="<%= asset_path('image2.jpg') %>"></div>
+								<noscript>
+									<%= image_tag "image2.jpg", alt: "img02" %>
+								</noscript>
+							</div>
+						</li>
+					
+						<li>
+							<div data-alt="img03" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350">
+								<div data-src="<%= asset_path('image3.jpg') %>" data-min-width="1300"></div>
+								<div data-src="<%= asset_path('image3.jpg') %>" data-min-width="1000"></div>
+								<div data-src="<%= asset_path('image3.jpg') %>" data-min-width="700"></div>
+								<div data-src="<%= asset_path('image3.jpg') %>" data-min-width="300"></div>
+								<div data-src="<%= asset_path('image3.jpg') %>" data-min-width="200"></div>
+								<div data-src="<%= asset_path('image3.jpg') %>" data-min-width="140"></div>
+								<div data-src="<%= asset_path('image3.jpg') %>"></div>
+								<noscript>
+									<%= image_tag "image3.jpg", alt: "img03" %>
+								</noscript>
+							</div>
+						</li>
+						
+						<li>
+							<div data-alt="img04" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350">
+								<div data-src="<%= asset_path('image4.jpg') %>" data-min-width="1300"></div>
+								<div data-src="<%= asset_path('image4.jpg') %>" data-min-width="1000"></div>
+								<div data-src="<%= asset_path('image4.jpg') %>" data-min-width="700"></div>
+								<div data-src="<%= asset_path('image4.jpg') %>" data-min-width="300"></div>
+								<div data-src="<%= asset_path('image4.jpg') %>" data-min-width="200"></div>
+								<div data-src="<%= asset_path('image4.jpg') %>" data-min-width="140"></div>
+								<div data-src="<%= asset_path('image4.jpg') %>"></div>
+								<noscript>
+									<%= image_tag "image4.jpg", alt: "img04" %>
+								</noscript>
+							</div>
+						</li>
+
+						<li>
+							<div data-alt="img05" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350">
+								<div data-src="<%= asset_path('image5.jpg') %>" data-min-width="1300"></div>
+								<div data-src="<%= asset_path('image5.jpg') %>" data-min-width="1000"></div>
+								<div data-src="<%= asset_path('image5.jpg') %>" data-min-width="700"></div>
+								<div data-src="<%= asset_path('image5.jpg') %>" data-min-width="300"></div>
+								<div data-src="<%= asset_path('image5.jpg') %>" data-min-width="200"></div>
+								<div data-src="<%= asset_path('image5.jpg') %>" data-min-width="140"></div>
+								<div data-src="<%= asset_path('image5.jpg') %>"></div>
+								<noscript>
+									<%= image_tag "image5.jpg", alt: "img05" %>
+								</noscript>
+							</div>
+						</li>
+
+						<li>
+							<div data-alt="img01" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350">
+								<div data-src="<%= asset_path('image1.jpg') %>" data-min-width="1300"></div>
+								<div data-src="<%= asset_path('image1.jpg') %>" data-min-width="1000"></div>
+								<div data-src="<%= asset_path('image1.jpg') %>" data-min-width="700"></div>
+								<div data-src="<%= asset_path('image1.jpg') %>" data-min-width="300"></div>
+								<div data-src="<%= asset_path('image1.jpg') %>" data-min-width="200"></div>
+								<div data-src="<%= asset_path('image1.jpg') %>" data-min-width="140"></div>
+								<div data-src="<%= asset_path('image1.jpg') %>"></div>
+								<noscript>
+									<%= image_tag "image1.jpg", alt: "img01" %>
+								</noscript>
+							</div>
+						</li>
+
+						<li>
+							<div data-alt="img02" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350">
+								<div data-src="<%= asset_path('image2.jpg') %>" data-min-width="1300"></div>
+								<div data-src="<%= asset_path('image2.jpg') %>" data-min-width="1000"></div>
+								<div data-src="<%= asset_path('image2.jpg') %>" data-min-width="700"></div>
+								<div data-src="<%= asset_path('image2.jpg') %>" data-min-width="300"></div>
+								<div data-src="<%= asset_path('image2.jpg') %>" data-min-width="200"></div>
+								<div data-src="<%= asset_path('image2.jpg') %>" data-min-width="140"></div>
+								<div data-src="<%= asset_path('image2.jpg') %>"></div>
+								<noscript>
+									<%= image_tag "image2.jpg", alt: "img02" %>
+								</noscript>
+							</div>
+						</li>
+					
+						<li>
+							<div data-alt="img03" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350">
+								<div data-src="<%= asset_path('image3.jpg') %>" data-min-width="1300"></div>
+								<div data-src="<%= asset_path('image3.jpg') %>" data-min-width="1000"></div>
+								<div data-src="<%= asset_path('image3.jpg') %>" data-min-width="700"></div>
+								<div data-src="<%= asset_path('image3.jpg') %>" data-min-width="300"></div>
+								<div data-src="<%= asset_path('image3.jpg') %>" data-min-width="200"></div>
+								<div data-src="<%= asset_path('image3.jpg') %>" data-min-width="140"></div>
+								<div data-src="<%= asset_path('image3.jpg') %>"></div>
+								<noscript>
+									<%= image_tag "image3.jpg", alt: "img03" %>
+								</noscript>
+							</div>
+						</li>
+						
+						<li>
+							<div data-alt="img04" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350">
+								<div data-src="<%= asset_path('image4.jpg') %>" data-min-width="1300"></div>
+								<div data-src="<%= asset_path('image4.jpg') %>" data-min-width="1000"></div>
+								<div data-src="<%= asset_path('image4.jpg') %>" data-min-width="700"></div>
+								<div data-src="<%= asset_path('image4.jpg') %>" data-min-width="300"></div>
+								<div data-src="<%= asset_path('image4.jpg') %>" data-min-width="200"></div>
+								<div data-src="<%= asset_path('image4.jpg') %>" data-min-width="140"></div>
+								<div data-src="<%= asset_path('image4.jpg') %>"></div>
+								<noscript>
+									<%= image_tag "image4.jpg", alt: "img04" %>
+								</noscript>
+							</div>
+						</li>
+
+						<li>
+							<div data-alt="img05" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350">
+								<div data-src="<%= asset_path('image5.jpg') %>" data-min-width="1300"></div>
+								<div data-src="<%= asset_path('image5.jpg') %>" data-min-width="1000"></div>
+								<div data-src="<%= asset_path('image5.jpg') %>" data-min-width="700"></div>
+								<div data-src="<%= asset_path('image5.jpg') %>" data-min-width="300"></div>
+								<div data-src="<%= asset_path('image5.jpg') %>" data-min-width="200"></div>
+								<div data-src="<%= asset_path('image5.jpg') %>" data-min-width="140"></div>
+								<div data-src="<%= asset_path('image5.jpg') %>"></div>
+								<noscript>
+									<%= image_tag "image5.jpg", alt: "img05" %>
+								</noscript>
+							</div>
+						</li>
+					</ul>
+	
+					<div class="gamma-overlay">
+						
+					</div>
 			</div>
 		</div>
 	</div>
@@ -276,5 +617,70 @@
         }
 				
       }
+
+      $(function() {
+
+				var GammaSettings = {
+						// order is important!
+						viewport : [ {
+							width : 1200,
+							columns : 5
+						}, {
+							width : 900,
+							columns : 4
+						}, {
+							width : 500,
+							columns : 3
+						}, { 
+							width : 320,
+							columns : 2
+						}, { 
+							width : 0,
+							columns : 2
+						} ]
+				};
+
+				Gamma.init( GammaSettings, fncallback );
+
+
+				// Example how to add more items (just a dummy):
+
+				var page = 0,
+					items = ['<li><div data-alt="img03" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350"><div data-src="images/gallery/image1.jpg" data-min-width="1300"></div><div data-src="images/gallery/image2.jpg" data-min-width="1000"></div><div data-src="images/gallery/image3.jpg" data-min-width="700"></div><div data-src="images/gallery/image4.jpg" data-min-width="300"></div><div data-src="images/gallery/image5.jpg" data-min-width="200"></div> <noscript><img src="images/gallery/image1.jpg" alt="img03"/></noscript></div></li>']
+
+				function fncallback() {
+
+					$( '#loadmore' ).show().on( 'click', function() {
+
+						++page;
+						var newitems = items[page-1]
+						if( page <= 1 ) {
+							
+							Gamma.add( $( newitems ) );
+
+						}
+						if( page === 1 ) {
+
+							$( this ).remove();
+
+						}
+
+					} );
+
+				}
+
+			});
+
+      function openNav() {
+					document.getElementById("mySidenav").style.width = "250px";
+			}
+
+			function closeNav() {
+					document.getElementById("mySidenav").style.width = "0";
+			}
+		
+			$('#menu-toggle').click(function(){
+				$(this).toggleClass('open');
+			})
 
 </script>

@@ -116,8 +116,6 @@
                 
             }
         };
-
-        console.log(bttn);
         const particles = new Particles(bttn, particlesOpts);
         
         let buttonVisible = true;
