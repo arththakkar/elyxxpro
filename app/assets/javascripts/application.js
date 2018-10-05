@@ -12,8 +12,6 @@
 //
 //= require jquery
 //= require rails-ujs
-//= require activestorage
-//= require turbolinks
 //= require bootstrap.min
 //= require masonry.pkgd.min
 //= require newWaterfall.js
@@ -22,6 +20,7 @@
 //= require demo.js
 //= require jquery.masonry.min
 //= require gamma.js
+//= require functions
 // require_tree .
 
 $(document).ready(function(){
