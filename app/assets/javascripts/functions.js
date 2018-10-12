@@ -160,4 +160,10 @@ function horizontal_button_click(element_id)
 
 	$('#menu-toggle').click(function(){
 		$(this).toggleClass('open');
-	})
+	});
+
+	$('.collection_name').click(function(){
+		var data_id = $(this).data("id");
+		$(".closebtn").click();
+		$("#collection_"+data_id).click();
+	});

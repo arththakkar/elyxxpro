@@ -73,7 +73,7 @@
 			<div id="mySidenav" class="sidenav">
 					<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 					<% @collections.each do |collection| %>
-						<a href="#"><%= collection.name %></a>
+						<a href="javascript:void(0)" data-id = "<%= collection.id %>" class="collection_name"><%= collection.name %></a>
 					<% end %>
 			</div>
 				
@@ -95,7 +95,7 @@
 						<% @collections.each do |collection| %>	
 							<% image_id = collection.cover_image %>
 							<% image_url = CollectionImage.find(image_id).url %>
-							<li>
+							<li id="collection_<%= collection.id %>">
 								<div data-alt="img01" data-description="<h3><%= collection.name %></h3>" data-max-width="1800" data-max-height="1350">
 									<div data-src="<%= image_url %>" data-min-width="1300"></div>
 									<div data-src="<%= image_url %>" data-min-width="1000"></div>
