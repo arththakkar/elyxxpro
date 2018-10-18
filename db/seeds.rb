@@ -63,10 +63,10 @@ abstract.collection_images.build(name: "image3", url: "https://www.dropbox.com/s
 abstract.update_attributes(cover_image: abstract.collection_images.first.id)
 
 posters = Collection.create(name: 'Posters')
-posters.collection_images.build(name: "image1", url: "https://www.dropbox.com/s/swjm5s37zshvspc/Ada-Lovelace-1.pdf?raw=1").save
-posters.collection_images.build(name: "image2", url: "https://www.dropbox.com/s/jkjgcz4lpfpwdl3/Chien-Wu-4.pdf?raw=1").save
-posters.collection_images.build(name: "image3", url: "https://www.dropbox.com/s/0zqrfpzl5weiav7/Emmy-Noether-2.pdf?raw=1").save
-posters.collection_images.build(name: "image4", url: "https://www.dropbox.com/s/bdj131n32tbc80d/Marie-Curie-1.pdf?raw=1").save
+posters.collection_images.build(name: "image1", url: "https://www.dropbox.com/s/ddlpdt9678oizh7/Ada-Lovelace-1.png?raw=1").save
+posters.collection_images.build(name: "image2", url: "https://www.dropbox.com/s/75cmg2sc2fav3b3/Chien-Wu-4.png?raw=1").save
+posters.collection_images.build(name: "image3", url: "https://www.dropbox.com/s/g1n8c8o0gz09e0b/Emmy-Noether-2.png?raw=1").save
+posters.collection_images.build(name: "image4", url: "https://www.dropbox.com/s/ywu63s1d23ezom0/Marie-Curie-1.png?raw=1").save
 posters.update_attributes(cover_image: posters.collection_images.first.id)
 
 patterns = Collection.create(name: 'Patterns')
