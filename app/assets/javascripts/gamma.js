@@ -145,6 +145,10 @@ function isHidden() {
 
 var Gamma = (function() {
 
+	imageArr = null;
+	currentCollection = null;
+	currentImage = 0;
+
 	var $window = $( window ),
 		$body = $( 'body' ),
 		$document = $( document ),
@@ -192,6 +196,29 @@ var Gamma = (function() {
 			historyapi : true
 		},
 		init = function( settings, callback ) {
+
+			console.log("=-=-=-=-=-=-aaaaa");
+			$.ajax({
+			    url: "/list_of_images_by_collection",
+			    type: "GET",
+			    dataType: "html",
+			    success: function(data){
+			        //console.log(data);
+			        imageArr = JSON.parse(data);
+
+
+			        // Image preload 
+			        var i = 1;
+			        while(imageArr[i]){
+			        	for (var j = 0; j < imageArr[i].length; j++) {
+							var imgTmp = new Image();
+							imgTmp.src=imageArr[i][j].url;
+			        	}
+			        	i++;
+			        }
+
+			    }
+			});
 
 			Gamma.settings = $.extend( true, {}, defaults, settings );
 
@@ -359,8 +386,10 @@ var Gamma = (function() {
 		_saveState = function( id ) {
 
 			if( !Gamma.settings.historyapi && id != undefined ) {
+				console.log(Gamma.isSV);
 
-				Gamma.isSV ? _goto( false, id ) : _goto( true, id );
+				//Gamma.isSV ? _goto( false, id ) : _goto( true, id );
+				_goto( false, id );
 
 			}
 			else if( id === undefined ) {
@@ -535,22 +564,41 @@ var Gamma = (function() {
 
 			if( !Gamma.isSV || Gamma.isAnimating ) {
 
-				return false;
+				//return false;
 
 			}
 
 			var current = Gamma.current;
 
-			if( dir === 'next' ) {
+			//gg = Gamma;
 
-				Gamma.current = Gamma.current < Gamma.itemsCount - 1 ? ++Gamma.current :
-					Gamma.settings.circular ? 0 : Gamma.current;
+			if( dir === 'next' ) {
+				console.log("=-=-in next=-=-");
+				// Gamma.current = Gamma.current < Gamma.itemsCount - 1 ? ++Gamma.current :
+				// 	Gamma.settings.circular ? 0 : Gamma.current;
+
+				currentImage = currentImage + 1;
+				if(currentImage >= imageArr[currentCollection].length){
+					currentImage = 0;
+				}
+
+				var imgContainer = document.getElementById("gamma-bigimg")
+				imgContainer.style.backgroundImage = "url('"+imageArr[currentCollection][currentImage].url+"')";
+				
 
 			}
 			else if( dir === 'prev' ) {
 
-				Gamma.current = Gamma.current > 0 ? --Gamma.current :
-					Gamma.settings.circular ? Gamma.itemsCount - 1 : Gamma.current;
+				// Gamma.current = Gamma.current > 0 ? --Gamma.current :
+				// 	Gamma.settings.circular ? Gamma.itemsCount - 1 : Gamma.current;
+
+				currentImage = currentImage - 1;
+				if(currentImage < 0){
+					currentImage = imageArr[currentCollection].length - 1;
+				}
+
+				var imgContainer = document.getElementById("gamma-bigimg")
+				imgContainer.style.backgroundImage = "url('"+imageArr[currentCollection][currentImage].url+"')";
 				
 			}
 
@@ -732,7 +780,19 @@ var Gamma = (function() {
 		},
 		// triggered when one grid image is clicked
 		_singleview = function() {
+			//var imageArr = [];
+			currentCollection = this.id.split("_")[1];
+			currentImage = 0;
+			console.log("=-=-=-=-=-=-");
+			console.log(currentCollection);
 
+			// Image preload 
+			for (var j = 0; j < imageArr[currentCollection].length; j++) {
+				var imgTmp = new Image();
+				console.log(imageArr[currentCollection][j].url);
+				imgTmp.src = imageArr[currentCollection][j].url;
+        	}
+			
 			var id = $( this ).index();
 			_saveState( id );
 
@@ -747,7 +807,7 @@ var Gamma = (function() {
 				$img = $item.children( 'img' );
 				
 			if( anim ) {
-
+				return;
 				Gamma.fly = $( '<img/>' ).attr( 'src', $img.attr( 'src' ) ).addClass( 'gamma-img-fly' ).css( {
 					width : $img.width(),
 					height : $img.height(),
@@ -762,6 +822,8 @@ var Gamma = (function() {
 				}
 
 			}
+
+
 				
 			// need to know which source to load for the image.
 			// also need to know the final size and position.
@@ -776,6 +838,9 @@ var Gamma = (function() {
 				} ),	
 				source = finalConfig.source,
 				finalSizePosition = finalConfig.finalSizePosition;
+
+				//finalConfig.source.src = "https://www.dropbox.com/s/8gzp3s3oabp0lfy/Pontrelli_1.jpg?raw=1";
+				console.log(finalConfig.source);
 
 			Gamma.current = id;
 
@@ -812,7 +877,7 @@ var Gamma = (function() {
 
 				} );
 
-				$item.css( 'visibility', 'hidden' );
+				//$item.css( 'visibility', 'hidden' );
 
 				if( !anim ) {
 
@@ -864,15 +929,34 @@ var Gamma = (function() {
 				}
 
 			}
+
+				if(document.getElementById("gamma-bigimg")){
+					var imgContainer = document.getElementById("gamma-bigimg");
+					imgContainer.style.backgroundImage = "url('"+imageArr[currentCollection][currentImage].url+"')";
+				}
+				else{
+
+					$( '.gamma-single-view' )
+						.append('<div id="gamma-bigimg" style="height: 80%;width: 80%; margin-top: 5%; margin-left: 10%; background-image: url('+imageArr[currentCollection][currentImage].url+');background-position: center; background-repeat: no-repeat; background-size: contain;"></div>' );
+				}
+
+
 			Gamma.svDescription.html( data.description );
 
 			// loading status: give a little amount of time before displaying it
 			var loadingtimeout = setTimeout( function() { Gamma.singleview.addClass( 'gamma-loading' );	}, Gamma.settings.svImageTransitionSpeedFade + 250 );
 			
+			//Gamma.svDescription
+
+			return;
+
 			// preload the new image
 			Gamma.svImage = $( '<img/>' ).load( function() {
 
 				var $img = $( this );
+
+				console.log($img)
+				$img.attr("id","bigimg");
 
 				// remove loading status
 				clearTimeout( loadingtimeout );
@@ -1001,7 +1085,7 @@ var Gamma = (function() {
 
 			if( Gamma.isAnimating || Gamma.fly ) {
 
-				return false;
+				//return false;
 
 			}
 
@@ -1036,15 +1120,15 @@ var Gamma = (function() {
 
 			}
 
-			var l = Gamma.svImage.position().left + $window.scrollLeft(),
-				t = Gamma.svImage.position().top + wst;
+			// var l = Gamma.svImage.position().left + $window.scrollLeft(),
+			// 	t = Gamma.svImage.position().top + wst;
 
-			Gamma.svImage.appendTo( $body ).css( {
-				position : 'absolute',
-				zIndex : 10000,
-				left : l,
-				top : t 
-			} );
+			// Gamma.svImage.appendTo( $body ).css( {
+			// 	position : 'absolute',
+			// 	zIndex : 10000,
+			// 	left : l,
+			// 	top : t 
+			// } );
 			
 			if( Gamma.supportTransitions ) {
 
@@ -1343,7 +1427,8 @@ var Gamma = (function() {
 
 			}
 
-			el.css( 'transition', property + ' ' + speed + 'ms ' + easing );
+			if(el)
+				el.css( 'transition', property + ' ' + speed + 'ms ' + easing );
 
 		},
 		// apply a transition or fallback to jquery animate based on condition (cond)
@@ -1353,13 +1438,15 @@ var Gamma = (function() {
 
 			if( fncomplete && cond ) {
 
-				el.on( transEndEventName, fncomplete );
+				if(el)
+					el.on( transEndEventName, fncomplete );
 
 			}
 
 			fncomplete = fncomplete || function() { return false; };
 
-			el.stop().applyStyle( styleCSS, $.extend( true, [], { duration : speed + 'ms', complete : fncomplete } ) );
+			if(el)
+				el.stop().applyStyle( styleCSS, $.extend( true, [], { duration : speed + 'ms', complete : fncomplete } ) );
 
 		},
 		// public method: adds more items
