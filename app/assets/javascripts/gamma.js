@@ -309,7 +309,7 @@ var Gamma = (function() {
 				Gamma.nav = $( '<nav class="gamma-nav"><span class="gamma-prev"></span><span class="gamma-next"></span></nav>' ).appendTo( Gamma.singleview );
 				Gamma.svnavnext = Gamma.nav.find( 'span.gamma-next' );
 				Gamma.svnavprev = Gamma.nav.find( 'span.gamma-prev' );
-				Gamma.cast = $( '<div class="col-sm-6 signup text-right float-right mt-3 mr-3"><h2><a href="#">Cast</a></h2></div>' ).insertAfter( Gamma.svplay );
+				Gamma.cast = $( '<div class="col-sm-6 signup text-right float-right mt-3 mr-3"><h2><a href="#" data-url="" data-id="" id="castId" >Cast</a></h2></div>' ).insertAfter( Gamma.svplay );
 
 				_initEvents( 'singleviewnavigation' );
 
@@ -602,6 +602,10 @@ var Gamma = (function() {
 				
 			}
 
+			var castBtn = document.getElementById("castId");
+			castBtn.setAttribute("data-url", imageArr[currentCollection][currentImage].url);
+			castBtn.setAttribute("data-id", imageArr[currentCollection][currentImage].id);
+
 			if( current === Gamma.current ) {
 
 				return false;
@@ -783,6 +787,11 @@ var Gamma = (function() {
 			//var imageArr = [];
 			currentCollection = this.id.split("_")[1];
 			currentImage = 0;
+
+			var castBtn = document.getElementById("castId");
+			castBtn.setAttribute("data-url", imageArr[currentCollection][currentImage].url);
+			castBtn.setAttribute("data-id", imageArr[currentCollection][currentImage].id);
+
 			console.log("=-=-=-=-=-=-");
 			console.log(currentCollection);
 
@@ -939,6 +948,10 @@ var Gamma = (function() {
 					$( '.gamma-single-view' )
 						.append('<div id="gamma-bigimg" style="height: 80%;width: 80%; margin-top: 5%; margin-left: 10%; background-image: url('+imageArr[currentCollection][currentImage].url+');background-position: center; background-repeat: no-repeat; background-size: contain;"></div>' );
 				}
+
+				var castBtn = document.getElementById("castId");
+			castBtn.setAttribute("data-url", imageArr[currentCollection][currentImage].url);
+			castBtn.setAttribute("data-id", imageArr[currentCollection][currentImage].id);
 
 
 			Gamma.svDescription.html( data.description );
