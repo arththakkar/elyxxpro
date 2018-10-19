@@ -19,8 +19,10 @@
 //= require particles.js
 //= require demo.js
 //= require jquery.masonry.min
-//= require gamma.js
+//= require cast_sender
+//= require cast
 //= require functions
+//= require gamma.js
 // require_tree .
 
 $(document).ready(function(){

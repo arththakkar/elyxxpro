@@ -301,6 +301,7 @@ var Gamma = (function() {
 			}
 
 		},
+
 		_createSingleViewNavigation = function() {
 
 			if( Gamma.itemsCount > 1 ) {
@@ -309,13 +310,16 @@ var Gamma = (function() {
 				Gamma.nav = $( '<nav class="gamma-nav"><span class="gamma-prev"></span><span class="gamma-next"></span></nav>' ).appendTo( Gamma.singleview );
 				Gamma.svnavnext = Gamma.nav.find( 'span.gamma-next' );
 				Gamma.svnavprev = Gamma.nav.find( 'span.gamma-prev' );
-				Gamma.cast = $( '<div class="col-sm-6 signup text-right float-right mt-3 mr-3"><h2><a href="#" data-url="" data-id="" id="castId" >Cast</a></h2></div>' ).insertAfter( Gamma.svplay );
+				Gamma.cast = $( '<div class="col-sm-6 signup text-right float-right mt-3 mr-3"><h2><a href="javascript:void(0)" data-url="" data-id="" id="castId" onclick="castMe(\'https://www.dropbox.com/s/2rh7inz8s7supds/pontrelli_07.jpg?raw=1\')">Cast</a></h2></div>' ).insertAfter( Gamma.svplay );
 
 				_initEvents( 'singleviewnavigation' );
 
 			}
 
 		},
+
+		
+
 		// controller: "goes to" a specific image or back to the grid
 		_goto = function( anim, id ) {
 
