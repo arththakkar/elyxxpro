@@ -39,8 +39,9 @@ function onInitSuccess() {
 function onInitError() {
   console.log("Initialization failed");
 }
-function castMe(url){
-  image_url = url;
+function castMe(url, ths){
+  //image_url = url;
+  image_url = ths.getAttribute("data-url");
   launchApp();
 }
 // $('.castme').click(function(){
