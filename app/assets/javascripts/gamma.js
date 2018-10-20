@@ -197,7 +197,7 @@ var Gamma = (function() {
 		},
 		init = function( settings, callback ) {
 
-			console.log("=-=-=-=-=-=-aaaaa");
+			// console.log("=-=-=-=-=-=-aaaaa");
 			$.ajax({
 			    url: "/list_of_images_by_collection",
 			    type: "GET",
@@ -578,7 +578,7 @@ var Gamma = (function() {
 			//gg = Gamma;
 
 			if( dir === 'next' ) {
-				console.log("=-=-in next=-=-");
+				// console.log("=-=-in next=-=-");
 				// Gamma.current = Gamma.current < Gamma.itemsCount - 1 ? ++Gamma.current :
 				// 	Gamma.settings.circular ? 0 : Gamma.current;
 
@@ -797,13 +797,13 @@ var Gamma = (function() {
 			castBtn.setAttribute("data-url", imageArr[currentCollection][currentImage].url);
 			castBtn.setAttribute("data-id", imageArr[currentCollection][currentImage].id);
 
-			console.log("=-=-=-=-=-=-");
-			console.log(currentCollection);
+			// console.log("=-=-=-=-=-=-");
+			// console.log(currentCollection);
 
 			// Image preload 
 			for (var j = 0; j < imageArr[currentCollection].length; j++) {
 				var imgTmp = new Image();
-				console.log(imageArr[currentCollection][j].url);
+				// console.log(imageArr[currentCollection][j].url);
 				imgTmp.src = imageArr[currentCollection][j].url;
         	}
 			
@@ -854,7 +854,7 @@ var Gamma = (function() {
 				finalSizePosition = finalConfig.finalSizePosition;
 
 				//finalConfig.source.src = "https://www.dropbox.com/s/8gzp3s3oabp0lfy/Pontrelli_1.jpg?raw=1";
-				console.log(finalConfig.source);
+				// console.log(finalConfig.source);
 
 			Gamma.current = id;
 
@@ -973,7 +973,7 @@ var Gamma = (function() {
 
 				var $img = $( this );
 
-				console.log($img)
+				// console.log($img)
 				$img.attr("id","bigimg");
 
 				// remove loading status
