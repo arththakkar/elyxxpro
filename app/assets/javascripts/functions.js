@@ -211,3 +211,10 @@ $("#login_btn").click(function(){
 		}, 5000);
 	}
 });
+
+$(".profile_nav li").unbind("click").click(function(){
+	$(".profile_nav").find("li").each(function(){
+		$(this).removeClass("active");
+	});
+	$(this).addClass("active");
+})
