@@ -18,11 +18,11 @@
 //= require anime.min.js
 //= require particles.js
 //= require demo.js
+//= require gamma.js
 //= require jquery.masonry.min
 //= require cast_sender
 //= require cast
 //= require functions
-//= require gamma.js
 // require_tree .
 
 $(document).ready(function(){

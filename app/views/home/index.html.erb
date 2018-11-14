@@ -71,8 +71,145 @@
 	<div id="about-to-home" onclick="horizontal_button_click(this.id);"><span id="home-text">Home</span></div>
 </section>
 
-<section class="section section-profile" id="right">
-	right
+<section class="section section-profile d-flex justify-content-center align-items-center" id="right">
+	<!-- SLIDER START HERE -->
+	<div style="position: absolute; top: 30px; width: 100%;" class="text-center">
+		<ul class="nav nav-tabs">
+			<li class="active"><a data-toggle="tab" href="#menu1">Offices</a></li>
+			<li><a data-toggle="tab" href="#menu2">Public Spaces</a></li>
+			<li><a data-toggle="tab" href="#menu3">Hospitals</a></li>
+			<li><a data-toggle="tab" href="#menu4">Hotels</a></li>
+		</ul>
+	</div>
+	<div class="container text-center">
+		<div class="col-10 col-md-12">
+
+			<div class="tab-content">
+				<div id="menu1" class="tab-pane fade">
+					<!-- SLIDER START HERE -->
+					<div class="main_slider col-10 col-md-12">
+						<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+							<div class="carousel-inner">
+								<div class="carousel-item active">
+									<%= image_tag "renders/render4.jpg", class: "d-block w-100" %>
+								</div>
+
+								<div class="carousel-item">
+									<%= image_tag "renders/render5.jpg", class: "d-block w-100" %>
+								</div>
+
+								<div class="carousel-item">
+									<%= image_tag "renders/render7.jpg", class: "d-block w-100" %>
+								</div>
+							</div>
+
+							<!-- Navigation Buttons -->
+							<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="sr-only">Previous</span>
+							</a>
+							<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="sr-only">Next</span>
+							</a>
+						</div>
+					</div>
+					<!-- SLIDER CLOSED -->
+				</div>
+				<div id="menu2" class="tab-pane fade">
+					<!-- SLIDER START HERE -->
+					<div class="main_slider col-10 col-md-12">
+						<div id="menu2_slider" class="carousel slide" data-ride="carousel">
+							<div class="carousel-inner">
+								<!-- <div class="carousel-item active">
+									<iframe width="100%" height="500" src="https://www.youtube.com/embed/Tnk3C2BZwLo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								</div> -->
+
+								<div class="carousel-item active">
+									<%= image_tag "renders/render0_1.jpg", class: "d-block w-100" %>
+								</div>
+
+								<div class="carousel-item">
+									<%= image_tag "renders/render0_2.jpg", class: "d-block w-100" %>
+								</div>
+							</div>
+
+							<!-- Navigation Buttons -->
+							<a class="carousel-control-prev" href="#menu2_slider" role="button" data-slide="prev">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="sr-only">Previous</span>
+							</a>
+							<a class="carousel-control-next" href="#menu2_slider" role="button" data-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="sr-only">Next</span>
+							</a>
+						</div>
+					</div>
+					<!-- SLIDER CLOSED -->
+				</div>
+				<div id="menu3" class="tab-pane fade">
+					<div class="main_slider col-10 col-md-12">
+						<div id="menu3_slider" class="carousel slide" data-ride="carousel">
+							<div class="carousel-inner">
+								<!-- <div class="carousel-item active">
+									<iframe width="100%" height="500" src="https://www.youtube.com/embed/Tnk3C2BZwLo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								</div> -->
+
+								<div class="carousel-item active">
+									<%= image_tag "renders/render3.jpg", class: "d-block w-100" %>
+								</div>
+
+								<div class="carousel-item">
+									<%= image_tag "renders/render6.jpg", class: "d-block w-100" %>
+								</div>
+							</div>
+
+							<!-- Navigation Buttons -->
+							<a class="carousel-control-prev" href="#menu3_slider" role="button" data-slide="prev">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="sr-only">Previous</span>
+							</a>
+							<a class="carousel-control-next" href="#menu3_slider" role="button" data-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="sr-only">Next</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div id="menu4" class="tab-pane fade">
+					<div class="main_slider col-10 col-md-12">
+						<div id="menu4_slider" class="carousel slide" data-ride="carousel">
+							<div class="carousel-inner">
+								<!-- <div class="carousel-item active">
+									<iframe width="100%" height="500" src="https://www.youtube.com/embed/Tnk3C2BZwLo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								</div> -->
+
+								<div class="carousel-item active">
+									<%= image_tag "renders/render1.jpg", class: "d-block w-100" %>
+								</div>
+
+								<div class="carousel-item">
+									<%= image_tag "renders/render1_v2.jpg", class: "d-block w-100" %>
+								</div>
+							</div>
+
+							<!-- Navigation Buttons -->
+							<a class="carousel-control-prev" href="#menu4_slider" role="button" data-slide="prev">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="sr-only">Previous</span>
+							</a>
+							<a class="carousel-control-next" href="#menu4_slider" role="button" data-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="sr-only">Next</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
 	<div id="profile-to-home" onclick="horizontal_button_click(this.id);">Home</div>
 </section>
 

@@ -17,3 +17,40 @@
  *= require style1
  *= require_self
  */
+.main_slider{
+	width: 100%;
+	height: 70%;
+	display: inline-block;
+}
+
+.section-profile .nav.nav-tabs{
+	width:auto;
+	display: inline-block;
+	margin: 0 auto;
+	border:none;
+}
+
+.section-profile .nav.nav-tabs li{
+	width:auto;
+	display: inline-block;
+	margin: 0 auto;
+	padding: 0 10px;
+	margin-bottom:10px;
+	border-bottom:2px solid transparent;
+}
+.section-profile .nav.nav-tabs li.active{
+	border-bottom-color:#3d5679;
+}
+
+.section-profile .nav.nav-tabs li a{
+	text-decoration: none;
+	color:#fff;
+}
+.section-profile .nav.nav-tabs li.active a, .section-profile .nav.nav-tabs li a:hover{
+	color:#3d5679;
+}
+.carousel-item img{
+	max-height: 500px !important;
+	width: auto !important;
+	margin: 0 auto;
+}

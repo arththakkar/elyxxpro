@@ -8,6 +8,8 @@ $(".section-home").removeAttr("style");
 
 $('.section-about').animate({"z-index": "5", "right": "0"}, "fast");
 $('.section-home').animate({"right": "-100%"}, "fast");
+
+
 //$('.section-home').css({ "right":"-100%"});
 //$('.section-about').css({"z-index":"5" , "right":"0"});
 }       
@@ -18,6 +20,10 @@ else if(element_id=="profile")
 
 	$('.section-profile').animate({"z-index": "5", "left": "0"}, "fast");
 	$('.section-home').animate({"right": "100%"}, "fast");
+
+	setTimeout(function() {
+    $('.section-profile .nav.nav-tabs li.active a').trigger('click');
+  }, 10);
 //$('.section-home').css({"right":"100%"});
 //$('.section-profile').css({"z-index":"5" , "left":"0"});
 }
