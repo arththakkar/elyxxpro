@@ -48,5 +48,13 @@ $(document).ready(function(){
 	setTimeout(function() {
 		$('.move-top').trigger('click');
 	}, 15800);
+
+	if(sessionStorage.getItem("login") === "yes"){
+		$(".login_form").hide();
+		$(".feedback_form").show();
+	}else{
+		$(".login_form").show();
+		$(".feedback_form").hide();
+	}
 });
 

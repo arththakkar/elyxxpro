@@ -15,4 +15,12 @@ class HomeController < ApplicationController
 		end
 		render :json => collection_images.to_json
 	end
+
+	def feedback
+		from = params[:email]
+		content = params[:content]
+
+		FeedbackMailer.feedback_email(from, content).deliver_now!
+		head :ok
+	end
 end

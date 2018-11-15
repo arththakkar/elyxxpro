@@ -202,6 +202,8 @@ $("#login_btn").click(function(){
 		$("#password").val("");
 		setTimeout(function(){
 			$("#success_login").fadeOut();
+			$(".login_form").hide();
+			$(".feedback_form").show();
 		}, 5000);
 	}else{
 		sessionStorage.setItem("login", "no");
@@ -210,6 +212,25 @@ $("#login_btn").click(function(){
 			$("#error_login").fadeOut();
 		}, 5000);
 	}
+});
+
+$("#submit_click").click(function(){
+	var email = $("#feedback_email").val();
+	var content = $("#feedback").val();
+
+	$.ajax({
+		url: "/feedback",
+		type: "POST",
+		dataType: "script",
+		data: {email: email, content: content},
+		success: function(){
+			console.log("Mail Sent");
+			$("#login-to-home").click();
+		},
+		error: function(){
+			console.log("Mail Error");
+		}
+	});
 });
 
 $(".profile_nav li").unbind("click").click(function(){
