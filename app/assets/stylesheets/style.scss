@@ -55,7 +55,7 @@ body{
 /* Top Bottom Button */
 #login {
   position: absolute;
-  font-size: 20px;
+  font-size: 20px !important;
   top: 30px;
   z-index: 3;
   cursor: pointer;
@@ -80,7 +80,7 @@ body{
 
 #gallery-main, #view-gallery{
   position: absolute;
-  font-size: 20px;
+  font-size: 20px !important;
   bottom: 30px;
   z-index: 3;
   cursor: pointer;
@@ -106,7 +106,7 @@ body{
 
 #login-to-home{
   position: absolute;
-  font-size: 20px;
+  font-size: 20px !important;
   bottom: 30px;
   z-index: 3;
   cursor: pointer;
@@ -131,7 +131,7 @@ body{
 
 #gallery-to-home, #gallery-wall-to-gallery{
   position: absolute;
-  font-size: 20px;
+  font-size: 20px !important;
   top: 30px;
   z-index: 3;
   cursor: pointer;
@@ -158,7 +158,7 @@ body{
 #about{
   left: 40px;
   position: absolute;
-  font-size: 20px;
+  font-size: 20px !important;
   top: 50%;
   cursor: pointer;
   transform: translateY(-50%);
@@ -182,7 +182,7 @@ body{
 #profile{
   right: 40px;
   position: absolute;
-  font-size: 20px;
+  font-size: 20px !important;
   top: 50%;
   cursor: pointer;
   transform: translateY(-50%);
@@ -206,7 +206,7 @@ body{
 #profile-to-home{
   left: 40px;
   position: absolute;
-  font-size: 20px;
+  font-size: 20px !important;
   top: 50%;
   cursor: pointer;
   transform: translateY(-50%);
@@ -230,7 +230,7 @@ body{
 #about-to-home{
   right: 40px;
   position: absolute;
-  font-size: 20px;
+  font-size: 20px !important;
   top: 50%;
   cursor: pointer;
   transform: translateY(-50%);
