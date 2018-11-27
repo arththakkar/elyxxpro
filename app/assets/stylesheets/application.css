@@ -54,3 +54,14 @@
 	width: auto !important;
 	margin: 0 auto;
 }
+.div_align_center{
+	margin: 0 auto;
+  width: 25%;
+  padding-top: 20px;
+  font-size: 12px !important;
+}
+html *
+{
+   font-size: 1em !important;
+   font-family: Verdana !important;
+}

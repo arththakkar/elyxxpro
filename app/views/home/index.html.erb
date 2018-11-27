@@ -66,37 +66,39 @@
 
 <section class="section section-home" id="center">
 
-	<!-- <div class="logo">
-		<%#= image_tag "elyxx.png" %>
+	<div class="logo">
+		<%= image_tag "elyxx.png" %>
 		<h3>THE FUTURE OF ART AND ARCHITECTURE</h3>
-	</div> -->
+	</div>
 	<div class="alert alert-success" role="alert" id="success_login" style="display: none; width: 30%; margin: auto; z-index: 1111;">
 	  You've logged in successfully.
 	</div>
-	<div class="animate">
-		<div class="move-top"><%= image_tag "logo_01.png" %></div>
-		<div class="part-two"><%= image_tag "logo_02.png" %></div>
-	</div>
+	<!-- <div class="animate">
+		<div class="move-top"><%#= image_tag "logo_01.png" %></div>
+		<div class="part-two"><%#= image_tag "logo_02.png" %></div>
+	</div> -->
 
-	<div id="about" onclick="horizontal_button_click(this.id);"><span id="about-text">About</span></div>
-	<div id="profile" onclick="horizontal_button_click(this.id);"><span id="profile-text">Profile</span></div>
+	<div id="about" onclick="horizontal_button_click(this.id);"><span id="about-text">Learn About Elyxx</span></div>
+	<div id="profile" onclick="horizontal_button_click(this.id);"><span id="profile-text">Elyxx In Real Life</span></div>
 	<div id="login" onclick="vertical_button_click(this.id);"><span id="login-text">Login</span></div>
-	<div id="gallery-main" onclick="vertical_button_click(this.id);"><span id="gallery-text">Gallery</span></div>
+	<div id="gallery-main" onclick="vertical_button_click(this.id);"><span id="gallery-text">Visit Our Gallery</span></div>
 </section>
 
-<section class="section section-gallery" id="gallery">
+<!-- <section class="section section-gallery" id="gallery">
 
 	<div class="gallery_logo">
-		<%= image_tag "gallery.png" %>
+		<%#= image_tag "gallery.png" %>
 		<h3>View our specially made collections of art from every facet of your imagination.</h3>
 	</div>
 
 	<div id="gallery-to-home" onclick="vertical_button_click(this.id);"><span id="gallery-home-text">Home</span></div>
 	<div id="view-gallery" onclick="vertical_button_click(this.id);"><span id="gallery-view-text">View</span></div>
-</section>
+</section> -->
 
 <section class="section section-about" id="left">
-	left
+	<!-- left -->
+	What is Lorem Ipsum?<br>
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 	<div id="about-to-home" onclick="horizontal_button_click(this.id);"><span id="home-text">Home</span></div>
 </section>
 
@@ -242,11 +244,15 @@
 	<div id="profile-to-home" onclick="horizontal_button_click(this.id);">Home</div>
 </section>
 
-<section class="section section-gallery-wall" id="gallery-wall">
+<section class="section section-gallery" id="gallery">
 
 	<!-- ADDED ON 2-10-18 -->
 	<!-- RIGHT DRAWER -->
-			
+			<div class="div_align_center">
+				 Search through the gallery to find an image you love<br>
+				 Select image you want to cast<br>
+				 Click "Cast to Screen" 
+			</div>
 			<div id="mySidenav" class="sidenav">
 					<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 					<% @collections.each do |collection| %>
@@ -295,7 +301,7 @@
 			</div>
 		</div>
 	</div>
-	<div id="gallery-wall-to-gallery" onclick="vertical_button_click(this.id);">Gallery</div>
+	<div id="gallery-to-home" onclick="vertical_button_click(this.id);">Home</div>
 </section>
 
 <section class="section section-gallery-collection relative-pos" id="gallery-collection">

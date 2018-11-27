@@ -196,6 +196,7 @@ $("#login_btn").click(function(){
 		}, 5000);
 	}else if(emailId.toLowerCase() == "mvp@elyxx.com" || password.toLowerCase() == "elyxx_mvp2018"){
 		sessionStorage.setItem("login", "yes");
+		$("#login-text").html("Give Feedback");
 		vertical_button_click("login-to-home");
 		$("#success_login").fadeIn();
 		$("#email_address").val("");
