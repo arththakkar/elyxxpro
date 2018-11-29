@@ -56,9 +56,16 @@
 }
 .div_align_center{
 	margin: 0 auto;
-  width: 25%;
+  width: 100%;
   padding-top: 20px;
   font-size: 16px !important;
+  text-align: center;
+}
+.div_align_center_about{
+	margin: 0 auto;
+  width: 60%;
+  font-size: 16px !important;
+  padding-top: 20px;
 }
 html *
 {

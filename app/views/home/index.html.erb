@@ -97,8 +97,10 @@
 
 <section class="section section-about" id="left">
 	<!-- left -->
+	<div class="div_align_center_about">
 	What is Lorem Ipsum?<br>
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+</div>
 	<div id="about-to-home" onclick="horizontal_button_click(this.id);"><span id="home-text">Home</span></div>
 </section>
 
@@ -249,8 +251,8 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 	<!-- ADDED ON 2-10-18 -->
 	<!-- RIGHT DRAWER -->
 			<div class="div_align_center" style="color: white; margin-top: 10px;">
-				 Search through the gallery to find an image you love<br>
-				 Select image you want to cast<br>
+				 Search through the gallery to find an image you love &nbsp; &nbsp; &nbsp; &nbsp;
+				 Select image you want to cast &nbsp; &nbsp; &nbsp; &nbsp;
 				 Click "Cast to Screen" 
 			</div>
 			<div id="mySidenav" class="sidenav">
@@ -259,7 +261,6 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 						<a href="javascript:void(0)" data-id = "<%= collection.id %>" class="collection_name"><%= collection.name %></a>
 					<% end %>
 			</div>
-				
 				<div id="menu-toggle" onclick="openNav()">
 					<div id="hamburger">
 						<span></span>
