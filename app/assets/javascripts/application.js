@@ -26,6 +26,10 @@
 // require_tree .
 
 $(document).ready(function(){
+	var login = sessionStorage.getItem("login");
+	if(login == "yes"){
+		$("#login-text").html("Give Feedback");
+	}
 	$("#login-text").hide(0).delay(1000).fadeIn(2000)
 	$("#profile-text").hide(0).delay(2000).fadeIn(2000)
 	$("#gallery-text").hide(0).delay(3000).fadeIn(2000)
