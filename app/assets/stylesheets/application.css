@@ -62,14 +62,20 @@
   text-align: center;
 }
 .div_align_center_about{
-	margin: 0 auto;
+	margin: 10% auto;
   width: 60%;
+  height: 100%;
   font-size: 16px !important;
   padding-top: 20px;
-  color: white;
+  color: #3d5679;
 }
 html *
 {
    font-size: 1em !important;
    font-family: Verdana !important;
+}
+body
+{
+	text-transform: uppercase !important;
+	color: #3d5679 !important;
 }
