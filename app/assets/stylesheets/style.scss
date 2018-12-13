@@ -74,6 +74,10 @@ body{
   color: white;
 }
 
+#login:hover{
+  color: #3d5679;
+}
+
 #login:before{
   position: absolute;
   content: '';
@@ -97,6 +101,14 @@ body{
   -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   color: white;
+}
+
+#gallery-main:hover{
+  color: #3d5679;
+}
+
+#view-gallery-main:hover{
+  color: #3d5679;
 }
 
 #gallery-main:before, #view-gallery:before{
@@ -125,6 +137,10 @@ body{
   color: white;
 }
 
+#login-to-home:hover{
+  color: #3d5679;
+}
+
 #login-to-home:before{
   position: absolute;
   content: '';
@@ -148,6 +164,14 @@ body{
   -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%); 
   color: white;
+}
+
+#gallery-to-home:hover{
+  color: #3d5679;
+}
+
+#gallery-wall-to-gallery:hover{
+  color: #3d5679;
 }
 
 #gallery-to-home:before, #gallery-wall-to-gallery:before{
@@ -175,6 +199,10 @@ body{
   color: white;
 }
 
+#about:hover{
+  color: #3d5679;
+}
+
 #about:before{
   position: absolute;
   content: '';
@@ -197,6 +225,10 @@ body{
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   color: white;
+}
+
+#profile:hover{
+  color: #3d5679;
 }
 
 #profile:before{
@@ -223,6 +255,10 @@ body{
   color: white;
 }
 
+#profile-to-home:hover{
+  color: #3d5679;
+}
+
 #profile-to-home:before{
   position: absolute;
   content: '';
@@ -245,6 +281,10 @@ body{
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   color: white;
+}
+
+#about-to-home:hover{
+  color: #3d5679;
 }
 
 #about-to-home:before{
