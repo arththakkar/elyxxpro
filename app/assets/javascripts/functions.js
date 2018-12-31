@@ -194,7 +194,7 @@ $("#login_btn").click(function(){
 		setTimeout(function(){
 			$("#error_login").fadeOut();
 		}, 5000);
-	}else if(emailId.toLowerCase() == "mvp@elyxx.com" || password.toLowerCase() == "elyxx_mvp2018"){
+	}else if(emailId.toLowerCase() == "mvp@elyxx.com" || emailId.toLowerCase() == "elyxx" || password.toLowerCase() == "elyxx_mvp2018" || password.toLowerCase() == "elyxx"){
 		sessionStorage.setItem("login", "yes");
 		$("#login-text").html("Give Feedback");
 		vertical_button_click("login-to-home");
